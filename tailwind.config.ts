@@ -20,54 +20,9 @@ const config: Config = {
       },
       // Define custom animation
       animation: {
-        drift1: 'drift1 20s linear infinite',
-        drift2: 'drift2 20s linear infinite',
-        drift3: 'drift3 20s linear infinite',
         shimmer: 'shimmer 2s linear infinite',
       },
       keyframes: {
-        drift1: {
-          '0%, 100%': {
-            transform: ' translateX(0) translateY(0)',
-          },
-          '25%': {
-            transform: ' translateX(8px) translateY(5px)',
-          },
-          '50%': {
-            transform: ' translateX(-5px) translateY(-5px)',
-          },
-          '75%': {
-            transform: ' translateX(5px) translateY(5px)',
-          },
-        },
-        drift2: {
-          '0%, 100%': {
-            transform: ' translateX(0) translateY(0)',
-          },
-          '25%': {
-            transform: ' translateX(-3px) translateY(-9px)',
-          },
-          '50%': {
-            transform: ' translateX(5px) translateY(2px)',
-          },
-          '75%': {
-            transform: ' translateX(-5px) translateY(-5px)',
-          },
-        },
-        drift3: {
-          '0%, 100%': {
-            transform: ' translateX(0) translateY(0)',
-          },
-          '25%': {
-            transform: ' translateX(2px) translateY(9px)',
-          },
-          '50%': {
-            transform: ' translateX(3px) translateY(-7px)',
-          },
-          '75%': {
-            transform: ' translateX(5px) translateY(5px)',
-          },
-        },
         shimmer: {
           from: {
             backgroundPosition: '0 0',
