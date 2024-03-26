@@ -26,8 +26,15 @@ const config: Config = {
       animation: {
         shimmer: 'shimmer 2s linear infinite',
         hover: 'hover 4s infinite',
+        scroll:
+          'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
       },
       keyframes: {
+        scroll: {
+          to: {
+            transform: 'translate(calc(-50% - 0.5rem))',
+          },
+        },
         // rotate back and forth
         hover: {
           '0%, 100%': {

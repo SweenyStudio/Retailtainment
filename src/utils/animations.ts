@@ -2,6 +2,7 @@ export const bounceAnimation = {
   initial: {
     y: -50,
     opacity: 0,
+    zIndex: 10,
   },
   animate: {
     y: 0,
@@ -10,6 +11,7 @@ export const bounceAnimation = {
       type: 'spring',
       stiffness: 260,
       damping: 20,
+      zIndex: 10,
     },
   },
 };

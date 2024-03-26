@@ -6,10 +6,11 @@ import Navbar from '@/components/sections/navbar';
 export default function Home() {
   return (
     <>
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden ">
         <Navbar />
         <Hero />
       </div>
+
       <MainFeature />
     </>
   );

@@ -11,10 +11,14 @@ import {
 import { motion, useCycle } from 'framer-motion';
 
 import Container from '@/components/ui/container';
-import Link from 'next/link';
+
 import { mainMenu } from '@/config/navigation';
 import { useDimensions } from '@/utils/useDimensions';
 import { useRef } from 'react';
+import Logo from '@/assets/logo-white.svg';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const Path = (props: {
   d?: string;
@@ -35,7 +39,7 @@ const Path = (props: {
 export const MenuToggle = ({ toggle }: { toggle: () => void }) => (
   <button
     onClick={toggle}
-    className="fixed left-[8px] top-[8px] z-30 flex h-16 w-16 items-center justify-center rounded-full  outline-none text-neutral-300"
+    className="fixed  left-[8px] top-[8px] z-30 flex h-16 w-16 items-center justify-center rounded-full  outline-none text-slate-300"
   >
     <svg width="20" height="20" viewBox="0 0 20 20">
       <Path
@@ -71,8 +75,8 @@ function MobileNavigation({
 }) {
   return (
     <motion.div
-      className={`width-72 padding-6 fixed top-24 flex h-screen flex-col gap-y-12  text-2xl text-white ${
-        open ? 'z-30' : 'z-0'
+      className={`width-72 padding-6 fixed top-24 flex h-screen flex-col gap-y-12 text-2xl text-white ${
+        open ? 'z-40' : 'z-0'
       }`}
       variants={navigationAnimation}
     >
@@ -90,7 +94,7 @@ function MobileNavigation({
           >
             {item.title}
             {item.icon ? (
-              <item.icon className="h-6 w-6 text-neutral-300" />
+              <item.icon className="h-6 w-6 text-slate-300" />
             ) : null}
           </Link>
         </motion.div>
@@ -122,7 +126,7 @@ function MobileNavbar() {
         className="absolute right-[12px] top-[14px] font-coolvetica text-3xl uppercase text-white lg:hidden"
         href="/"
       >
-        MAC SWEENY
+        <Image src={Logo} alt="Logo" />
       </motion.a>
     </main>
   );
@@ -138,10 +142,10 @@ function DesktopNavbar() {
     >
       <motion.a
         variants={bounceAnimation}
-        className="z-10 hidden font-coolvetica w-[140px] text-3xl uppercase text-white lg:flex"
+        className="z-10 hidden font-gothic h-full w-auto text-3xl uppercase text-white lg:flex"
         href="/"
       >
-        MAC SWEENY
+        <Image src={Logo} alt="Logo h-12 w-auto" />
       </motion.a>
       <motion.div
         variants={bounceAnimation}
@@ -165,6 +169,11 @@ function DesktopNavbar() {
             </motion.div>
           </Link>
         ))}
+      </motion.div>
+      <motion.div variants={bounceAnimation}>
+        <Button className="z-10 hidden lg:flex" size="default">
+          <Link href="/apply">Join Waitlist</Link>
+        </Button>
       </motion.div>
     </motion.header>
   );
