@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { InfiniteMovingCards } from '../ui/infinite-moving-cards';
-import LogoAustralian from '@/assets/logos/australian.svg';
-import LogoFinancial from '@/assets/logos/financial-review.svg';
-import LogoForbes from '@/assets/logos/forbes.svg';
-import LogoShopify from '@/assets/logos/shopify.svg';
-import { SubHeaderLight } from '../ui/text';
+import React from "react";
+import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
+import LogoAustralian from "@/assets/logos/australian.svg";
+import LogoFinancial from "@/assets/logos/financial-review.svg";
+import LogoForbes from "@/assets/logos/forbes.svg";
+import LogoShopify from "@/assets/logos/shopify.svg";
+import { SubHeaderLight } from "../ui/text";
 
 export default function ScrollingLogos() {
   return (
@@ -21,19 +21,19 @@ export default function ScrollingLogos() {
 
 const Logos = [
   {
-    name: 'The Australian',
+    name: "The Australian",
     image: LogoAustralian,
   },
   {
-    name: 'Financial Review',
+    name: "Financial Review",
     image: LogoFinancial,
   },
   {
-    name: 'Forbes',
+    name: "Forbes",
     image: LogoForbes,
   },
   {
-    name: 'Shopify',
+    name: "Shopify",
     image: LogoShopify,
   },
 ];
