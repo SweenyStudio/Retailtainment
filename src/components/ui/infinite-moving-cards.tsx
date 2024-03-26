@@ -12,7 +12,7 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    image: string | StaticImageData | React.ReactNode;
+    image: string | StaticImageData;
     name: string;
   }[];
   direction?: 'left' | 'right';

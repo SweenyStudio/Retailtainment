@@ -10,7 +10,7 @@ import { SubHeaderLight } from '../ui/text';
 
 export default function ScrollingLogos() {
   return (
-    <section className="flex flex-col items-center py-16 relative ">
+    <section className="flex pt-16 flex-col items-center relative ">
       <p className="text-slate-300">As Seen In</p>
       <div className=" rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards items={Logos} direction="right" speed="slow" />
