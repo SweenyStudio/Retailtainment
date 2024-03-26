@@ -4,7 +4,11 @@ import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -45,7 +49,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={gothicRegular.className}>{children}</body>
+      <body className={`${gothicRegular.variable} ${inter.variable} font-sans`}>
+        {children}
+      </body>
     </html>
   );
 }

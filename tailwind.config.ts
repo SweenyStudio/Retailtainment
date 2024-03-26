@@ -15,14 +15,28 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        gothic: ['var(--font-gothic)'],
+        sans: ['var(--font-inter)'],
+      },
       colors: {
         retailGreen: '#00B67A',
       },
       // Define custom animation
       animation: {
         shimmer: 'shimmer 2s linear infinite',
+        hover: 'hover 4s infinite',
       },
       keyframes: {
+        // rotate back and forth
+        hover: {
+          '0%, 100%': {
+            transform: 'rotate(6deg)',
+          },
+          '50%': {
+            transform: 'rotate(-6deg)',
+          },
+        },
         shimmer: {
           from: {
             backgroundPosition: '0 0',

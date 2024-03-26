@@ -10,6 +10,7 @@ import Link from 'next/link';
 import LogoWhite from '@/assets/logo-white.svg';
 import SquareObject from '@/assets/square-object.webp';
 import StarObject from '@/assets/star-object.webp';
+import { SubHeaderLight } from '../ui/text';
 import ThingoObject from '@/assets/thingo.webp';
 import { useParallax } from '@/utils/useParallax';
 import { useRef } from 'react';
@@ -17,13 +18,38 @@ import { useRef } from 'react';
 export default function Hero() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y1 = useParallax(scrollYProgress, 300, 0.05);
-  const y2 = useParallax(scrollYProgress, -400, 0.04);
-  const y3 = useParallax(scrollYProgress, 300, 0.07);
-  const y4 = useParallax(scrollYProgress, 500, 0.03);
 
+  const isDesktop = typeof window !== 'undefined' && window.innerWidth > 1024;
+  const multiplier = isDesktop ? 2 : 1;
+
+  const y1 = useParallax(scrollYProgress, 300 * multiplier, 0.05);
+  const y2 = useParallax(scrollYProgress, -400 * multiplier, 0.04);
+  const y3 = useParallax(scrollYProgress, 300 * multiplier, 0.07);
+  const y4 = useParallax(scrollYProgress, 500 * multiplier, 0.03);
   return (
-    <section className="bg-black relative py-32 dark:bg-grid-white/[0.12] overflow-hidden  ">
+    <section className="bg-black relative pt-32 dark:bg-grid-white/[0.12] overflow-hidden font-gothic  ">
+      <Container>
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+        <Image
+          src={LogoWhite}
+          alt="Logo"
+          className="w-full h-auto z-40  relative "
+        />
+        <div className="flex flex-col text-center justify-center items-center">
+          <SubHeaderLight className="mt-4">
+            Ecommerce & Retail Accelerator
+          </SubHeaderLight>
+          <p className="mt-4 z-0 text-xl tracking-normal leading-tight text-neutral-300">
+            Elevating today&apos;s visionaries into tomorrow&apos;s market
+            leaders. We&apos;re here to transform your brand&apos;s potential
+            into unparalleled growth and success.
+          </p>
+          <Button asChild size="lg" className="z-40">
+            <Link href={'/apply'}>Apply To Join Waitlist</Link>
+          </Button>
+          <p className="text-sm my-16 font-sans">Scroll To Explore</p>
+        </div>
+      </Container>
       <motion.div
         style={{
           y: y1,
@@ -36,9 +62,9 @@ export default function Hero() {
           duration: 30,
           repeat: Infinity,
         }}
-        className="absolute top-4 left-2 w-36 h-auto z-10"
+        className="absolute top-4 left-2 w-36 md:w-48 h-auto z-10"
       >
-        <Image src={StarObject} alt="Star" className=" w-24 m-2 h-auto " />
+        <Image src={StarObject} alt="Star" className=" w-full m-2 h-auto " />
       </motion.div>
       <motion.div
         style={{
@@ -52,9 +78,13 @@ export default function Hero() {
           duration: 30,
           repeat: Infinity,
         }}
-        className="absolute -bottom-4 left-2 w-36 h-auto z-10"
+        className="absolute -bottom-4 left-2 w-24 md:w-36 h-auto z-10"
       >
-        <Image src={SquareObject} alt="Square" className=" w-24 m-2 h-auto " />
+        <Image
+          src={SquareObject}
+          alt="Square"
+          className=" w-full m-2 h-auto "
+        />
       </motion.div>
       <motion.div
         style={{
@@ -69,9 +99,13 @@ export default function Hero() {
           duration: 30,
           repeat: Infinity,
         }}
-        className="absolute -bottom-[8rem] -right-[6rem] z-10 animate-drift3 "
+        className="absolute -bottom-[8rem] -right-[6rem] z-10 w-60 lg:w-96 animate-drift3 "
       >
-        <Image src={CircleObject} alt="Circle" className=" w-60 m-2 h-auto " />
+        <Image
+          src={CircleObject}
+          alt="Circle"
+          className=" w-full m-2 h-auto "
+        />
       </motion.div>
       <motion.div
         style={{
@@ -86,29 +120,14 @@ export default function Hero() {
           duration: 30,
           repeat: Infinity,
         }}
-        className="absolute -top-4 right-2 w-36 h-auto z-10 animate-drift2"
+        className="absolute -top-4 right-2 w-36 md:w-44 h-auto z-10 animate-drift2"
       >
-        <Image src={ThingoObject} alt="Thingo" className=" w-24 m-2 h-auto " />
-      </motion.div>
-      <Container>
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         <Image
-          src={LogoWhite}
-          alt="Logo"
-          className="w-full h-auto z-40 block "
+          src={ThingoObject}
+          alt="Thingo"
+          className=" w-full m-2 h-auto "
         />
-        <div className="flex flex-col z-40 text-center justify-center items-center">
-          <p className="z-40 text-3xl font-bold  tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 mt-4 uppercase">
-            Ecommerce & Retail Accelerator
-          </p>
-          <p className="mt-4 z-40 text-neutral-300">
-            SCALING THE NEXT GENERATION OF BRANDS
-          </p>
-          <Button asChild size="lg" className="z-40">
-            <Link href={'/apply'}>Apply To Join Waitlist</Link>
-          </Button>
-        </div>
-      </Container>
+      </motion.div>
     </section>
   );
 }
