@@ -1,16 +1,19 @@
 "use client";
 
+import { bounceAnimation, staggeredAnimation } from "@/utils/animations";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
+
+import { Button } from "../ui/button";
 import Container from "@/components/ui/container";
 import Gif600 from "@/assets/600m.gif";
 import Image from "next/image";
+import Link from "next/link";
+import Poster from "@/assets/poster.webp";
 import { SubHeader } from "../ui/text";
 import usp1 from "@/assets/1.webp";
 import usp2 from "@/assets/2.webp";
 import usp3 from "@/assets/3.webp";
-import { motion, useInView } from "framer-motion";
-import { bounceAnimation, staggeredAnimation } from "@/utils/animations";
-import { useRef, useState } from "react";
-import Poster from "@/assets/poster.webp";
 
 const Usps = [
   {
@@ -74,7 +77,8 @@ export default function MainFeature() {
 
 function UspComponent() {
   const ref = useRef(null);
-  const videoRef = useRef(null);
+const videoRef = useRef<HTMLVideoElement>(null);
+
   const isInView = useInView(ref);
   const [isPlaying, setIsPlaying] = useState(false); // State to track video play status
 
@@ -152,6 +156,11 @@ function UspComponent() {
           </button>
         )}
       </motion.div>
+             <motion.div variants={bounceAnimation}>
+                <Button asChild size="lg" className="z-10 mt-6">
+                  <Link href={"/apply"}>Apply To Join Waitlist</Link>
+                </Button>
+              </motion.div>
     </motion.div>
   );
 }
