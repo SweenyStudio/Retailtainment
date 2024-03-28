@@ -162,17 +162,16 @@ function DesktopNavbar() {
               variants={linkAnimation}
               initial="initial"
               whileHover="hover"
-              className="gap-x-2 flex flex-row"
+              className="gap-x-2 flex flex-row hover:underline underline-offset-4"
             >
               {item.title}
-              {item.icon ? <item.icon className="h-6 w-6" /> : null}
             </motion.div>
           </Link>
         ))}
       </motion.div>
       <motion.div variants={bounceAnimation}>
-        <Button className="z-10 hidden lg:flex" size="default">
-          <Link href="/apply">Join Waitlist</Link>
+        <Button asChild size="lg" className="z-10 tracking-tight font-gothic">
+          <Link href={"/apply"}>Join Waitlist</Link>
         </Button>
       </motion.div>
     </motion.header>

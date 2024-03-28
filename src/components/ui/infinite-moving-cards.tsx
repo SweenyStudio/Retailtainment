@@ -1,8 +1,9 @@
 "use client";
 
-import { cn } from "@/utils/cn";
-import React, { useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
+import React, { useEffect, useState } from "react";
+
+import { cn } from "@/utils/cn";
 
 export const InfiniteMovingCards = ({
   items,
@@ -25,6 +26,7 @@ export const InfiniteMovingCards = ({
 
   useEffect(() => {
     addAnimation();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const [start, setStart] = useState(false);
   function addAnimation() {
@@ -73,7 +75,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-10 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className,
       )}
     >

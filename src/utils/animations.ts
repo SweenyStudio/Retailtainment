@@ -8,7 +8,7 @@ export const bounceAnimation = {
     y: 0,
     opacity: 1,
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 260,
       damping: 20,
       zIndex: 10,
@@ -21,11 +21,11 @@ export const linkAnimation = {
     scale: 1,
   },
   hover: {
-    scale: 1.3,
+    scale: 1.1,
     transition: {
-      type: 'spring',
-      stiffness: 200,
-      damping: 5,
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
     },
   },
 };
@@ -78,16 +78,16 @@ export const sidebarAnimation = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 20,
       restDelta: 2,
     },
   }),
   closed: {
-    clipPath: 'circle(32px at 40px 40px)',
+    clipPath: "circle(32px at 40px 40px)",
     transition: {
       delay: 0.5,
-      type: 'spring',
+      type: "spring",
       stiffness: 400,
       damping: 40,
     },

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useInView } from "framer-motion";
+import { motion, useScroll, useInView, useTransform } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import CircleObject from "@/assets/circle.webp";
@@ -12,7 +12,6 @@ import SquareObject from "@/assets/square-object.webp";
 import StarObject from "@/assets/star-object.webp";
 import { SubHeaderLight } from "../ui/text";
 import ThingoObject from "@/assets/thingo.webp";
-import { useParallax } from "@/utils/useParallax";
 import { useRef } from "react";
 import ScrollingLogos from "./scrolling-logos";
 import { bounceAnimation, staggeredAnimation } from "@/utils/animations";
@@ -22,13 +21,11 @@ export default function Hero() {
   const isInView = useInView(ref);
   const { scrollYProgress } = useScroll({ target: ref });
 
-  const isDesktop = typeof window !== "undefined" && window.innerWidth > 1024;
-  const multiplier = isDesktop ? 2 : 1.5;
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, 90]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
-  const y1 = useParallax(scrollYProgress, 300 * multiplier, 0.1);
-  const y2 = useParallax(scrollYProgress, -400 * multiplier, 0.15);
-  const y3 = useParallax(scrollYProgress, 300 * multiplier, 0.17);
-  const y4 = useParallax(scrollYProgress, 500 * multiplier, 0.13);
   return (
     <>
       <section className="bg-black relative pt-32 pb-16 dark:bg-grid-white/[0.12] overflow-hidden font-gothic items-center flex flex-col justify-center  ">
@@ -55,7 +52,7 @@ export default function Hero() {
               </motion.div>
               <motion.p
                 variants={bounceAnimation}
-                className="mt-4 z-0 max-w-3xl text-lg tracking-normal leading-tight text-slate-300"
+                className="mt-4 z-0 max-w-3xl font-sans font-light text-md md:text-lg tracking-normal leading-tight text-slate-300"
               >
                 Elevating today&apos;s visionaries into tomorrow&apos;s market
                 leaders. We&apos;re here to transform your brand&apos;s
