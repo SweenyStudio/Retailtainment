@@ -10,15 +10,14 @@ import {
 } from "@/utils/animations";
 import { motion, useCycle } from "framer-motion";
 
+import { Button } from "@/components/ui/button";
 import Container from "@/components/ui/container";
-
+import Image from "next/image";
+import Link from "next/link";
+import Logo from "@/assets/logo-white.svg";
 import { mainMenu } from "@/config/navigation";
 import { useDimensions } from "@/utils/useDimensions";
 import { useRef } from "react";
-import Logo from "@/assets/logo-white.svg";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 const Path = (props: {
   d?: string;
@@ -93,9 +92,7 @@ function MobileNavigation({
             onClick={toggleOpen}
           >
             {item.title}
-            {item.icon ? (
-              <item.icon className="h-6 w-6 text-slate-300" />
-            ) : null}
+
           </Link>
         </motion.div>
       ))}
