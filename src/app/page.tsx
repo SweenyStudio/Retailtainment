@@ -1,5 +1,5 @@
+import Flywheel from "@/components/sections/flywheel";
 import Hero from "@/components/sections/hero";
-
 import MainFeature from "@/components/sections/main-feature";
 import Navbar from "@/components/sections/navbar";
 
@@ -10,8 +10,8 @@ export default function Home() {
         <Navbar />
         <Hero />
       </div>
-
       <MainFeature />
+      <Flywheel />
     </>
   );
 }

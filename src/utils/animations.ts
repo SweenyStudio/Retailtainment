@@ -34,7 +34,7 @@ export const staggeredAnimation = {
   initial: {},
   animate: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
     },
   },
 };

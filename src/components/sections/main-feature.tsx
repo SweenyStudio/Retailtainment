@@ -77,7 +77,7 @@ export default function MainFeature() {
 
 function UspComponent() {
   const ref = useRef(null);
-const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const isInView = useInView(ref);
   const [isPlaying, setIsPlaying] = useState(false); // State to track video play status
@@ -102,12 +102,12 @@ const videoRef = useRef<HTMLVideoElement>(null);
       variants={staggeredAnimation}
       className="flex flex-col items-center justify-center"
     >
-      <div className="border-y md:border-y-0 flex flex-col md:flex-row  border-slate-700 divide-y md:divide-y-0 md:divide-x divide-slate-700 mt-6">
+      <div className="border-y md:border-y-0 flex flex-col md:grid md:grid-cols-3  border-slate-700 divide-y md:divide-y-0 md:divide-x divide-slate-700 mt-6">
         {Usps.map((usp, index) => (
           <motion.div
             key={index}
             variants={bounceAnimation}
-            className="flex flex-row items-center justify-center py-6 h-52 md:h-fit  "
+            className="flex flex-row items-center justify-center py-6 h-full md:h-fit   "
           >
             <div className="w-24 h-24 ">
               <Image
@@ -117,7 +117,7 @@ const videoRef = useRef<HTMLVideoElement>(null);
               />
             </div>
             <div className="w-full flex flex-col justify-center">
-              <SubHeader className="mt-4 text-xl md:text-2xl text-start">
+              <SubHeader className="text-xl md:text-2xl text-start">
                 {usp.title}
               </SubHeader>
               <p className="mt-4 text-start text-base tracking-normal leading-tight text-slate-600">
@@ -156,11 +156,11 @@ const videoRef = useRef<HTMLVideoElement>(null);
           </button>
         )}
       </motion.div>
-             <motion.div variants={bounceAnimation}>
-                <Button asChild size="lg" className="z-10 mt-6">
-                  <Link href={"/apply"}>Apply To Join Waitlist</Link>
-                </Button>
-              </motion.div>
+      <motion.div variants={bounceAnimation}>
+        <Button asChild size="lg" className="z-10 mt-6">
+          <Link href={"/apply"}>Apply To Join Waitlist</Link>
+        </Button>
+      </motion.div>
     </motion.div>
   );
 }
