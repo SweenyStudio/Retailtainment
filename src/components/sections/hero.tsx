@@ -28,7 +28,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="bg-black relative pt-32 pb-16 bg-grid-small-white/[0.2] overflow-hidden font-gothic items-center flex flex-col justify-center  ">
+      <section className="bg-black relative pt-32 pb-16 bg-grid-small-white/[0.4] overflow-hidden font-gothic items-center flex flex-col justify-center  ">
         <motion.div
           initial="initial"
           ref={ref}

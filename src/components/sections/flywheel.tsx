@@ -35,11 +35,11 @@ const FlyWheelObjects = [
 
 export default function Flywheel() {
   return (
-    <section className="py-16 bg-black">
+    <section className="py-16 bg-black ">
       <Container>
         <FlyWheelHeading />
         <FlyWheelMobile />
-        <div className="bg-grid-small-white/20">
+        <div className="bg-grid-small-white/40 z-10">
           {FlyWheelObjects.map((object, index) => (
             <FlyWheelStep
               index={index}

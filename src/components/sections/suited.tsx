@@ -72,7 +72,7 @@ const notForYou = [
 
 export default function Suited() {
   return (
-    <section className="py-16 bg-black">
+    <section className="py-16 bg-black bg-grid-small-white/[0.4] ">
       <Container className="flex flex-col items-center justify-center">
         <SubHeaderLight className="text-center">
           SUITED TO YOU IF YOU’RE A BUSINESS:
