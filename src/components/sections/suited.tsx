@@ -1,19 +1,21 @@
 'use client';
 
+import { bounceAnimation, staggeredAnimation } from '@/utils/animations';
+import { motion, useInView } from 'framer-motion';
+
+import { Button } from '@/components/ui/button';
+import Container from '../ui/container';
+import Cross from '@/assets/icons/x.svg';
 import Expert from '@/assets/icons/expert.svg';
 import Growth from '@/assets/icons/growth.svg';
 import House from '@/assets/icons/house.svg';
+import Image from 'next/image';
+import Link from 'next/link';
 import Navigation from '@/assets/icons/navigation.svg';
 import Rocket from '@/assets/icons/rocket.svg';
 import Store from '@/assets/icons/store.svg';
-import Cross from '@/assets/icons/x.svg';
-import { Button } from '@/components/ui/button';
-import { bounceAnimation } from '@/utils/animations';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
-import Container from '../ui/container';
 import { SubHeaderLight } from '../ui/text';
+import { useRef } from 'react';
 
 const BusinessValues = [
   {
@@ -45,7 +47,7 @@ const BusinessValues = [
   },
 ];
 
-const NotForYou = [
+const notForYou = [
   {
     image: Cross,
     description: 'Under $1M yearly turnover',
@@ -79,34 +81,10 @@ export default function Suited() {
           WITH <span className="text-retailGold">$1M - $50M</span> YEARLY
           TURNOVER +
         </SubHeaderLight>
-        <div className="grid md:grid-cols-6 gap-6 mt-12">
-          {BusinessValues.map((value, index) => (
-            <div
-              key={index}
-              className=" flex flex-row md:flex-col gap-2 items-center"
-            >
-              <Image src={value.image} alt="icon" className="w-16 h-16" />
-              <p className="text-start md:text-center md:mt-4 text-zinc-300">
-                {value.description}
-              </p>
-            </div>
-          ))}
-        </div>
+        <SuitedFor />
         <hr className="h-px border-t-zinc-400 bg-zinc-400 w-[150px] my-10 md:my-20 mx-auto" />
         <SubHeaderLight className="text-center">NOT FOR YOU:</SubHeaderLight>
-        <div className="grid md:grid-cols-5 gap-6 mt-12 mx-auto">
-          {NotForYou.map((value, index) => (
-            <div
-              key={index}
-              className=" flex flex-row md:flex-col gap-2 items-center"
-            >
-              <Image src={value.image} alt="icon" className="w-16 h-16" />
-              <p className="text-start md:text-center md:mt-4 text-zinc-300">
-                {value.description}
-              </p>
-            </div>
-          ))}
-        </div>
+        <NotForYou />
         <motion.div variants={bounceAnimation} className="mt-12 mx-auto">
           <Button asChild size="lg" className="z-10">
             <Link href={'/apply'}>Apply To Join Waitlist</Link>
@@ -114,5 +92,59 @@ export default function Suited() {
         </motion.div>
       </Container>
     </section>
+  );
+}
+
+function SuitedFor() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  return (
+    <motion.div
+      initial="initial"
+      ref={ref}
+      animate={isInView ? 'animate' : 'initial'}
+      variants={staggeredAnimation}
+      className="grid md:grid-cols-6 gap-6 mt-12"
+    >
+      {BusinessValues.map((value, index) => (
+        <motion.div
+          variants={bounceAnimation}
+          key={index}
+          className=" flex flex-row md:flex-col gap-2 items-center"
+        >
+          <Image src={value.image} alt="icon" className="w-16 h-16" />
+          <p className="text-start md:text-center md:mt-4 text-zinc-300">
+            {value.description}
+          </p>
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+}
+
+function NotForYou() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  return (
+    <motion.div
+      className="grid md:grid-cols-5 gap-6 mt-12 mx-auto"
+      initial="initial"
+      ref={ref}
+      animate={isInView ? 'animate' : 'initial'}
+      variants={staggeredAnimation}
+    >
+      {notForYou.map((value, index) => (
+        <motion.div
+          key={index}
+          variants={bounceAnimation}
+          className=" flex flex-row md:flex-col gap-2 items-center"
+        >
+          <Image src={value.image} alt="icon" className="w-16 h-16" />
+          <p className="text-start md:text-center md:mt-4 text-zinc-300">
+            {value.description}
+          </p>
+        </motion.div>
+      ))}
+    </motion.div>
   );
 }
