@@ -117,13 +117,6 @@ function MobileNavbar() {
         <MobileNavigation open={isOpen} toggleOpen={toggleOpen} />
         <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav>
-      <motion.a
-        variants={bounceAnimation}
-        className="absolute right-[12px] top-[14px] font-coolvetica text-3xl uppercase text-white lg:hidden"
-        href="/"
-      >
-        <Image src={Logo} alt="Logo" />
-      </motion.a>
     </main>
   );
 }
