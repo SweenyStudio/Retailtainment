@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   bounceAnimation,
@@ -7,17 +7,17 @@ import {
   navigationAnimation,
   sidebarAnimation,
   staggeredAnimation,
-} from "@/utils/animations";
-import { motion, useCycle } from "framer-motion";
+} from '@/utils/animations';
+import { motion, useCycle } from 'framer-motion';
 
-import { Button } from "@/components/ui/button";
-import Container from "@/components/ui/container";
-import Image from "next/image";
-import Link from "next/link";
-import Logo from "@/assets/logo-white.svg";
-import { mainMenu } from "@/config/navigation";
-import { useDimensions } from "@/utils/useDimensions";
-import { useRef } from "react";
+import Logo from '@/assets/logo-white.svg';
+import { Button } from '@/components/ui/button';
+import Container from '@/components/ui/container';
+import { mainMenu } from '@/config/navigation';
+import { useDimensions } from '@/utils/useDimensions';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRef } from 'react';
 
 const Path = (props: {
   d?: string;
@@ -38,13 +38,13 @@ const Path = (props: {
 export const MenuToggle = ({ toggle }: { toggle: () => void }) => (
   <button
     onClick={toggle}
-    className="fixed  left-[8px] top-[8px] z-30 flex h-16 w-16 items-center justify-center rounded-full  outline-none text-slate-300"
+    className="fixed  left-[8px] top-[8px] z-30 flex h-16 w-16 items-center justify-center rounded-full  outline-none text-zinc-300"
   >
     <svg width="20" height="20" viewBox="0 0 20 20">
       <Path
         variants={{
-          closed: { d: "M 2 2.5 L 20 2.5" },
-          open: { d: "M 3 16.5 L 17 2.5" },
+          closed: { d: 'M 2 2.5 L 20 2.5' },
+          open: { d: 'M 3 16.5 L 17 2.5' },
         }}
       />
       <Path
@@ -57,8 +57,8 @@ export const MenuToggle = ({ toggle }: { toggle: () => void }) => (
       />
       <Path
         variants={{
-          closed: { d: "M 2 16.346 L 20 16.346" },
-          open: { d: "M 3 2.5 L 17 16.346" },
+          closed: { d: 'M 2 16.346 L 20 16.346' },
+          open: { d: 'M 3 2.5 L 17 16.346' },
         }}
       />
     </svg>
@@ -75,7 +75,7 @@ function MobileNavigation({
   return (
     <motion.div
       className={`width-72 padding-6 fixed top-24 flex h-screen flex-col gap-y-12 text-2xl text-white ${
-        open ? "z-40" : "z-0"
+        open ? 'z-40' : 'z-0'
       }`}
       variants={navigationAnimation}
     >
@@ -92,7 +92,6 @@ function MobileNavigation({
             onClick={toggleOpen}
           >
             {item.title}
-
           </Link>
         </motion.div>
       ))}
@@ -109,7 +108,7 @@ function MobileNavbar() {
     <main>
       <motion.nav
         initial={false}
-        animate={isOpen ? "open" : "closed"}
+        animate={isOpen ? 'open' : 'closed'}
         custom={height}
         ref={containerRef}
         className=" flex lg:hidden"
@@ -168,7 +167,7 @@ function DesktopNavbar() {
       </motion.div>
       <motion.div variants={bounceAnimation}>
         <Button asChild size="lg" className="z-10 tracking-tight font-gothic">
-          <Link href={"/apply"}>Join Waitlist</Link>
+          <Link href={'/apply'}>Join Waitlist</Link>
         </Button>
       </motion.div>
     </motion.header>
