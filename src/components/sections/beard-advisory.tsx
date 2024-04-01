@@ -11,10 +11,10 @@ export default function BeardAdvisoryCTA() {
       <Container>
         <div className="flex flex-col md:flex-row items-center gap-y-4 justify-center md:justify-between max-w-7xl mx-auto">
           <div>
-            <SubHeaderLight className=" from-retailGold to-retailGold text-center md:text-start ">
+            <SubHeaderLight className=" from-retailGold to-retailGold font-gothic text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-b uppercase text-center md:text-start ">
               Over $50 million in turn over?
             </SubHeaderLight>
-            <p className="text-center md:text-start text-2xl tracking-tight ">
+            <p className="text-center text-zinc-50 md:text-start text-2xl tracking-tight ">
               <span className="underline underline-offset-2 font-medium">
                 Beard Advisory
               </span>{' '}
