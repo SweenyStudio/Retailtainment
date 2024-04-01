@@ -1,5 +1,6 @@
 'use client';
 
+import { bounceAnimation, staggeredAnimation } from '@/utils/animations';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 
 import CircleObject from '@/assets/circle.webp';
@@ -9,7 +10,6 @@ import StarObject from '@/assets/star-object.webp';
 import ThingoObject from '@/assets/thingo.webp';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/ui/container';
-import { bounceAnimation, staggeredAnimation } from '@/utils/animations';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';

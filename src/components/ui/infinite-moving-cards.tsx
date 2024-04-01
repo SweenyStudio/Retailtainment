@@ -26,8 +26,8 @@ export const InfiniteMovingCards = ({
 
   useEffect(() => {
     addAnimation();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
@@ -89,7 +89,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item) => (
           <Image
-            className="h-24 w-72 relative bg-gradient-to-b from-black to-zinc-950 rounded-2xl border border-b-0 flex-shrink-0 border-zinc-700 px-8 py-6 md:w-[450px]"
+            className="h-24 w-72 relative bg-gradient-to-b from-black to-zinc-900 rounded-2xl border border-b-0 flex-shrink-0 border-zinc-700 px-8 py-6 md:w-[450px]"
             src={item.image}
             alt={item.name}
             key={item.name}
