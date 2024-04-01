@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gothicRegular.variable} ${inter.variable} font-sans overscroll-none`}
+        className={`${gothicRegular.variable} ${inter.variable} font-sans overscroll-none bg-black`}
       >
         {children}
         <Footer />

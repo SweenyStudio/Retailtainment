@@ -21,10 +21,10 @@ export default function Hero() {
   const isInView = useInView(ref);
   const { scrollYProgress } = useScroll({ target: ref });
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, 300]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, 90]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const y4 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const y1 = useTransform(scrollYProgress, [0, 0.5], [0, 300]);
+  const y2 = useTransform(scrollYProgress, [0, 0.5], [0, 90]);
+  const y3 = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
+  const y4 = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
 
   return (
     <>
