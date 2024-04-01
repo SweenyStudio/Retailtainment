@@ -1,13 +1,12 @@
 'use client';
 
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-
 import Simon from '@/assets/simon.webp';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/ui/container';
+import { useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRef } from 'react';
 import { SubHeader } from '../ui/text';
 
 export default function AboutText() {
@@ -88,14 +87,14 @@ function OurOrigin() {
           Simon’s journey from the ground up, from his early days influenced by
           the markets to achieving a monumental $600 million valuation with
           Culture Kings, showcases a path of relentless innovation and deep
-          understanding of retail's evolving landscape. Retailtainment is built
-          on the foundation of this journey, aiming to democratise the tools and
-          strategies that led to his success. Retailtainment is founded on the
-          principle of empowering business owners across every facet of their
-          enterprise. Embodying Simon Beard’s entrepreneurial spirit and his
-          hands-on approach to success, the company stands as a bastion for
-          businesses to not only learn but to master the intricacies of their
-          operations. With a strong emphasis on internal capability,
+          understanding of retail&sapos;s evolving landscape. Retailtainment is
+          built on the foundation of this journey, aiming to democratise the
+          tools and strategies that led to his success. Retailtainment is
+          founded on the principle of empowering business owners across every
+          facet of their enterprise. Embodying Simon Beard’s entrepreneurial
+          spirit and his hands-on approach to success, the company stands as a
+          bastion for businesses to not only learn but to master the intricacies
+          of their operations. With a strong emphasis on internal capability,
           Retailtainment equips companies with ‘Chiefs on Demand’ for
           executive-level insight in marketing, technology, finance, and beyond,
           ensuring a comprehensive grasp over business growth. The objective is
