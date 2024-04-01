@@ -1,45 +1,45 @@
-import "../styles/globals.css";
+import '../styles/globals.css';
 
-import { Inter } from "next/font/google";
-import type { Metadata } from "next";
-import localFont from "next/font/local";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 
 const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
-  title: "RETAILTAINMENT | Ecommerce & Retail Accelerator",
+  title: 'RETAILTAINMENT | Ecommerce & Retail Accelerator',
   description: `Elevating today's visionaries into tomorrow's market leaders. We're here to transform your brand's potential into unparalleled growth and success.`,
 };
 
 const gothicRegular = localFont({
   src: [
     {
-      path: "../styles/fonts/ITC_Avant_Garde_Gothic_Bold_Condensed.otf",
-      weight: "700",
-      style: "normal",
+      path: '../styles/fonts/ITC_Avant_Garde_Gothic_Bold_Condensed.otf',
+      weight: '700',
+      style: 'normal',
     },
     {
-      path: "../styles/fonts/ITC_Avant_Garde_Gothic_Book_Condensed.otf",
-      weight: "400",
-      style: "normal",
+      path: '../styles/fonts/ITC_Avant_Garde_Gothic_Book_Condensed.otf',
+      weight: '400',
+      style: 'normal',
     },
     {
-      path: "../styles/fonts/ITC_Avant_Garde_Gothic_Demi_Condensed.otf",
-      weight: "600",
-      style: "normal",
+      path: '../styles/fonts/ITC_Avant_Garde_Gothic_Demi_Condensed.otf',
+      weight: '600',
+      style: 'normal',
     },
     {
-      path: "../styles/fonts/ITC_Avant_Garde_Gothic_Medium_Condensed.otf",
-      weight: "500",
-      style: "normal",
+      path: '../styles/fonts/ITC_Avant_Garde_Gothic_Medium_Condensed.otf',
+      weight: '500',
+      style: 'normal',
     },
   ],
-  display: "swap",
-  variable: "--font-gothic",
+  display: 'swap',
+  variable: '--font-gothic',
 });
 
 export default function RootLayout({

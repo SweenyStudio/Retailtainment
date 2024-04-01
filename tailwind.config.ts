@@ -12,7 +12,7 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    "node_modules/flowbite-react/lib/esm/**/*.js",
+    'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
     extend: {
@@ -22,6 +22,7 @@ const config: Config = {
       },
       colors: {
         retailGreen: '#00B67A',
+        retailGold: '#BAA575',
       },
       // Define custom animation
       animation: {
@@ -33,7 +34,7 @@ const config: Config = {
       keyframes: {
         scroll: {
           to: {
-            transform: 'translate(calc(-50% - 0.5rem))',
+            transform: 'tranzinc(calc(-50% - 0.5rem))',
           },
         },
         // rotate back and forth
@@ -62,9 +63,9 @@ const config: Config = {
     },
   },
   plugins: [
-    require("flowbite/plugin"),
+    require('flowbite/plugin'),
     addVariablesForColors,
-    function({ matchUtilities, theme }: any) {
+    function ({ matchUtilities, theme }: any) {
       matchUtilities(
         {
           'bg-grid': (value: any) => ({
