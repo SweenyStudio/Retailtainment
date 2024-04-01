@@ -39,7 +39,7 @@ const Socials = [
 
 export default function Footer() {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-black">
       <Container>
         <div className="flex flex-col justify-center items-center gap-y-6">
           <Image src={Logo} alt="Logo" className="h-12 w-auto" />

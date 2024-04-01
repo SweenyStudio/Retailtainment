@@ -1,15 +1,16 @@
 'use client';
 
+import { bounceAnimation, staggeredAnimation } from '@/utils/animations';
+import { motion, useInView } from 'framer-motion';
+import Image, { StaticImageData } from 'next/image';
+
 import Arrow from '@/assets/arrow.webp';
 import image1 from '@/assets/flywheel/1.webp';
 import image2 from '@/assets/flywheel/2.webp';
 import image3 from '@/assets/flywheel/3.webp';
 import image4 from '@/assets/flywheel/4.webp';
 import Container from '@/components/ui/container';
-import { bounceAnimation, staggeredAnimation } from '@/utils/animations';
 import { Carousel } from 'flowbite-react';
-import { motion, useInView } from 'framer-motion';
-import Image, { StaticImageData } from 'next/image';
 import { useRef } from 'react';
 import { SubHeaderLight } from '../ui/text';
 
@@ -34,7 +35,7 @@ const FlyWheelObjects = [
 
 export default function Flywheel() {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-black">
       <Container>
         <FlyWheelHeading />
         <FlyWheelMobile />

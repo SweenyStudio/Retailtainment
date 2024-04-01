@@ -3,19 +3,19 @@
 import { bounceAnimation, staggeredAnimation } from '@/utils/animations';
 import { motion, useInView } from 'framer-motion';
 
-import { Button } from '@/components/ui/button';
-import Container from '../ui/container';
-import Cross from '@/assets/icons/x.svg';
 import Expert from '@/assets/icons/expert.svg';
 import Growth from '@/assets/icons/growth.svg';
 import House from '@/assets/icons/house.svg';
-import Image from 'next/image';
-import Link from 'next/link';
 import Navigation from '@/assets/icons/navigation.svg';
 import Rocket from '@/assets/icons/rocket.svg';
 import Store from '@/assets/icons/store.svg';
-import { SubHeaderLight } from '../ui/text';
+import Cross from '@/assets/icons/x.svg';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useRef } from 'react';
+import Container from '../ui/container';
+import { SubHeaderLight } from '../ui/text';
 
 const BusinessValues = [
   {
@@ -72,7 +72,7 @@ const notForYou = [
 
 export default function Suited() {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-black">
       <Container className="flex flex-col items-center justify-center">
         <SubHeaderLight className="text-center">
           SUITED TO YOU IF YOU’RE A BUSINESS:
