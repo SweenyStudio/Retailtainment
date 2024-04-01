@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 
+import Footer from '@/components/sections/footer';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -53,6 +54,7 @@ export default function RootLayout({
         className={`${gothicRegular.variable} ${inter.variable} font-sans overscroll-none`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
