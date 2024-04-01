@@ -1,20 +1,20 @@
-"use client";
+'use client';
 
-import { motion, useScroll, useInView, useTransform } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 
-import { Button } from "@/components/ui/button";
-import CircleObject from "@/assets/circle.webp";
-import Container from "@/components/ui/container";
-import Image from "next/image";
-import Link from "next/link";
-import LogoWhite from "@/assets/logo-white.svg";
-import SquareObject from "@/assets/square-object.webp";
-import StarObject from "@/assets/star-object.webp";
-import { SubHeaderLight } from "../ui/text";
-import ThingoObject from "@/assets/thingo.webp";
-import { useRef } from "react";
-import ScrollingLogos from "./scrolling-logos";
-import { bounceAnimation, staggeredAnimation } from "@/utils/animations";
+import CircleObject from '@/assets/circle.webp';
+import LogoWhite from '@/assets/logo-white.svg';
+import SquareObject from '@/assets/square-object.webp';
+import StarObject from '@/assets/star-object.webp';
+import ThingoObject from '@/assets/thingo.webp';
+import { Button } from '@/components/ui/button';
+import Container from '@/components/ui/container';
+import { bounceAnimation, staggeredAnimation } from '@/utils/animations';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRef } from 'react';
+import { SubHeaderLight } from '../ui/text';
+import ScrollingLogos from './scrolling-logos';
 
 export default function Hero() {
   const ref = useRef(null);
@@ -28,11 +28,11 @@ export default function Hero() {
 
   return (
     <>
-      <section className="bg-black relative pt-32 pb-16 dark:bg-grid-white/[0.12] overflow-hidden font-gothic items-center flex flex-col justify-center  ">
+      <section className="bg-black relative pt-32 pb-16 bg-grid-small-white/[0.2] overflow-hidden font-gothic items-center flex flex-col justify-center  ">
         <motion.div
           initial="initial"
           ref={ref}
-          animate={isInView ? "animate" : "initial"}
+          animate={isInView ? 'animate' : 'initial'}
           variants={staggeredAnimation}
         >
           <Container>
@@ -52,7 +52,7 @@ export default function Hero() {
               </motion.div>
               <motion.p
                 variants={bounceAnimation}
-                className="mt-4 z-0 max-w-3xl font-sans font-light text-md md:text-lg tracking-normal leading-tight text-slate-300"
+                className="mt-4 z-0 max-w-3xl font-sans font-light text-md md:text-lg tracking-normal leading-tight text-zinc-300"
               >
                 Elevating today&apos;s visionaries into tomorrow&apos;s market
                 leaders. We&apos;re here to transform your brand&apos;s
@@ -60,7 +60,7 @@ export default function Hero() {
               </motion.p>
               <motion.div variants={bounceAnimation}>
                 <Button asChild size="lg" className="z-10 mt-6">
-                  <Link href={"/apply"}>Apply To Join Waitlist</Link>
+                  <Link href={'/apply'}>Apply To Join Waitlist</Link>
                 </Button>
               </motion.div>
             </div>
