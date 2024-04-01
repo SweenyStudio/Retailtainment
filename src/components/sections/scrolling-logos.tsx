@@ -1,17 +1,15 @@
-"use client";
+'use client';
 
-import React from "react";
-import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
-import LogoAustralian from "@/assets/logos/australian.svg";
-import LogoFinancial from "@/assets/logos/financial-review.svg";
-import LogoForbes from "@/assets/logos/forbes.svg";
-import LogoShopify from "@/assets/logos/shopify.svg";
-import { SubHeaderLight } from "../ui/text";
+import LogoAustralian from '@/assets/logos/australian.svg';
+import LogoFinancial from '@/assets/logos/financial-review.svg';
+import LogoForbes from '@/assets/logos/forbes.svg';
+import LogoShopify from '@/assets/logos/shopify.svg';
+import { InfiniteMovingCards } from '../ui/infinite-moving-cards';
 
 export default function ScrollingLogos() {
   return (
     <section className="flex pt-16 flex-col items-center relative ">
-      <p className="text-slate-300">As Seen In</p>
+      <p className="text-zinc-300">As Seen In</p>
       <div className=" rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards items={Logos} direction="right" speed="slow" />
       </div>
@@ -21,19 +19,19 @@ export default function ScrollingLogos() {
 
 const Logos = [
   {
-    name: "The Australian",
+    name: 'The Australian',
     image: LogoAustralian,
   },
   {
-    name: "Financial Review",
+    name: 'Financial Review',
     image: LogoFinancial,
   },
   {
-    name: "Forbes",
+    name: 'Forbes',
     image: LogoForbes,
   },
   {
-    name: "Shopify",
+    name: 'Shopify',
     image: LogoShopify,
   },
 ];
