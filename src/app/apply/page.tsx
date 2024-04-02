@@ -19,7 +19,11 @@ export default function Apply() {
   return (
     <div className="bg-black">
       <Navbar />
-      <div data-tf-live="01HRB4Z5G78XA5XYWYVNYN4RCB"></div>
+
+      <div
+        data-tf-live="01HRB4Z5G78XA5XYWYVNYN4RCB"
+        className="min-h-[600px] bg-white"
+      ></div>
       <Script src="//embed.typeform.com/next/embed.js"></Script>
     </div>
   );
