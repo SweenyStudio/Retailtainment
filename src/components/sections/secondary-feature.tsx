@@ -107,6 +107,14 @@ export default function SecondaryFeature() {
               <Link href={'/apply'}>Apply To Join Waitlist</Link>
             </Button>
           </motion.div>
+          <motion.div>
+            <p className="mt-6 z-10 font-gothic text-xl md:text-3xl font-bold tracking-tight leading-none text-retailGold uppercase">
+              Limited Spots Available
+            </p>
+            <p className="mt-2 z-10 font-medium text-base md:text-xl tracking-tight leading-none text-zinc-800">
+              Cancellation At Anytime
+            </p>
+          </motion.div>
           <hr className="h-px border-t-zinc-400 bg-zinc-400 w-[150px] my-10 md:my-20 mx-auto" />
           <Results />
         </Container>
