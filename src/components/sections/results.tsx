@@ -1,11 +1,12 @@
 'use client';
 
+import { bounceAnimation, staggeredAnimation } from '@/utils/animations';
+import { motion, useInView } from 'framer-motion';
+
 import IconCross from '@/assets/icon-cross.webp';
 import IconTick from '@/assets/icon-tick.webp';
 import Logo from '@/assets/logo-white.svg';
-import { bounceAnimation, staggeredAnimation } from '@/utils/animations';
 import { DotIcon } from '@radix-ui/react-icons';
-import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
 import Container from '../ui/container';
@@ -24,7 +25,7 @@ export default function Results() {
           ref={ref}
           animate={isInView ? 'animate' : 'initial'}
           variants={staggeredAnimation}
-          className="md:grid md:grid-cols-4 gap-12 flex flex-col items-center justify-center mt-16 md:max-w-7xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 md:gap-12 gap-2  items-center justify-center mt-16 md:max-w-7xl mx-auto"
         >
           <Courses />
           <RetailTainment />
@@ -39,12 +40,12 @@ function Courses() {
   return (
     <motion.div
       variants={bounceAnimation}
-      className="relative rounded-[50px] w-full border-dotted border-2 border-zinc-700 md:mt-10 p-10 h-60 "
+      className="relative rounded-[50px] w-full md:border-dotted md:border-2 border-zinc-700 md:mt-10 md:p-10 h-72 md:h-60 "
     >
       <Image
         src={IconCross}
         alt="cross"
-        className="absolute right-1/2 translate-x-1/2 -top-12 w-1/3"
+        className="absolute right-1/2 translate-x-1/2 -top-9 md:-top-12 w-1/3"
       />
       <div className="p-3 bg-zinc-300 rounded-2xl">
         <p className="uppercase font-black font-gothic text-black text-2xl">
@@ -73,7 +74,7 @@ function RetailTainment() {
   return (
     <motion.div
       variants={bounceAnimation}
-      className="relative rounded-[50px] md:rounded-[100px] w-full col-span-2 items-center flex flex-col border-2  border-zinc-500 bg-zinc-900 p-10 h-96"
+      className="relative order-last md:order-2 rounded-[50px] md:rounded-[100px] w-full col-span-2 items-center flex flex-col border-2  border-zinc-500 bg-zinc-900 p-10 h-96"
     >
       <Image
         src={IconTick}
@@ -103,12 +104,12 @@ function Agencies() {
   return (
     <motion.div
       variants={bounceAnimation}
-      className="relative rounded-[50px] w-full border-dotted border-2 border-zinc-700 md:mt-10 p-10 h-72 "
+      className="relative rounded-[50px] md:order-last w-full md:border-dotted md:border-2 border-zinc-700 md:mt-10 md:p-10 h-72 "
     >
       <Image
         src={IconCross}
         alt="cross"
-        className="absolute right-1/2 translate-x-1/2 -top-12 w-1/3"
+        className="absolute right-1/2 translate-x-1/2 -top-9 md:-top-12 w-1/3"
       />
       <div className="p-3 bg-zinc-300 rounded-2xl">
         <p className="uppercase font-black font-gothic text-black text-2xl">

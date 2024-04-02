@@ -75,7 +75,7 @@ export const InfiniteMovingPhotos = ({
     <div
       ref={containerRef}
       className={cn(
-        'scroller relative z-10 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+        'scroller relative w-screen z-10 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
         className
       )}
     >

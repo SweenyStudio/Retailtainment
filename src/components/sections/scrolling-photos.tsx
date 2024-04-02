@@ -1,5 +1,4 @@
 'use client';
-import { InfiniteMovingPhotos } from '../ui/infinite-moving-photos';
 
 import Image1 from '@/assets/ugc/1.webp';
 import Image10 from '@/assets/ugc/10.webp';
@@ -13,12 +12,18 @@ import Image6 from '@/assets/ugc/6.webp';
 import Image7 from '@/assets/ugc/7.webp';
 import Image8 from '@/assets/ugc/8.webp';
 import Image9 from '@/assets/ugc/9.webp';
+import { InfiniteMovingPhotos } from '../ui/infinite-moving-photos';
 
 export default function ScrollingPhotos() {
   return (
     <section className="flex py-16 flex-col items-center relative ">
       <div className=" rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
-        <InfiniteMovingPhotos items={Photos} direction="right" speed="slow" />
+        <InfiniteMovingPhotos
+          items={Photos}
+          direction="right"
+          speed="slow"
+          pauseOnHover={false}
+        />
       </div>
     </section>
   );

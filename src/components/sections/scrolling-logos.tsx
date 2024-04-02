@@ -11,7 +11,12 @@ export default function ScrollingLogos() {
     <section className="flex pt-16 flex-col items-center relative ">
       <p className="text-zinc-300">As Seen In</p>
       <div className=" rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
-        <InfiniteMovingCards items={Logos} direction="right" speed="slow" />
+        <InfiniteMovingCards
+          items={Logos}
+          direction="right"
+          speed="slow"
+          pauseOnHover={false}
+        />
       </div>
     </section>
   );
