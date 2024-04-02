@@ -170,7 +170,7 @@ function ChiefBox({
         <SubHeader className="text-start text-5xl text-zinc-100">
           {name}
         </SubHeader>
-        <p className="text-base text-start text-zinc-300">{description}</p>
+        <p className="text-base text-start text-zinc-300 mb-6">{description}</p>
       </div>
     </div>
   );
