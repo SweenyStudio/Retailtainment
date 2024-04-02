@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 
 import Footer from '@/components/sections/footer';
+import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -50,6 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-KFPKWBMH" />
       <body
         className={`${gothicRegular.variable} ${inter.variable} font-sans overscroll-none bg-black`}
       >
