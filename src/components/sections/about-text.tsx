@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 import { SubHeader } from '../ui/text';
+import ScrollingPhotos from './scrolling-photos';
 
 export default function AboutText() {
   const ref = useRef(null);
@@ -69,6 +70,7 @@ export default function AboutText() {
               className="w-full h-suto mt-12 md:mt-0 md:col-span-2"
             />
           </div>
+          <ScrollingPhotos />
           <OurOrigin />
         </Container>
       </div>
@@ -80,7 +82,7 @@ function OurOrigin() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
-    <div className="mt-12 md:mt-36">
+    <div className="mt-12">
       <div>
         <SubHeader>Our Origin: Empowering Through Experience</SubHeader>
         <p className="md:text-lg mt-6 text-zinc-800">

@@ -13,16 +13,21 @@ export default function BeardAdvisoryCTA() {
             <h3 className=" text-retailGold font-gothic text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-none bg-clip-text uppercase text-center md:text-start ">
               Over $50 million in turn over?
             </h3>
-            <p className="text-center text-zinc-50 md:text-start text-2xl tracking-tight ">
-              <span className="underline underline-offset-2 font-medium">
+            <div className="text-center text-zinc-50 md:text-start text-2xl tracking-tight ">
+              <Link
+                className="underline underline-offset-2 font-medium"
+                href="https://beardadvisory.com/"
+                target="_blank"
+              >
                 Beard Advisory
-              </span>{' '}
+              </Link>{' '}
               may be a more suitable solution
-            </p>{' '}
+            </div>{' '}
           </div>
           <Link
             className="p-6 rounded-3xl  bg-white/10 hover:bg-white/20 duration-300 transition-colors flex flex-row justify-center gap-x-2 items-center"
             href="https://beardadvisory.com"
+            target="_blank"
           >
             <Image
               src={BeardAdvisoryLogo}
