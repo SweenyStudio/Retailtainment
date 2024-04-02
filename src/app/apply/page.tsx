@@ -21,8 +21,8 @@ export default function Apply() {
       <Navbar />
 
       <div
-        data-tf-live="01HRB4Z5G78XA5XYWYVNYN4RCB"
-        className="min-h-[600px] bg-white"
+        className="min-h-[650px] bg-white"
+        data-tf-live="01HTEJR1GW5JCWPEY2P3J5KS7B"
       ></div>
       <Script src="//embed.typeform.com/next/embed.js"></Script>
     </div>
