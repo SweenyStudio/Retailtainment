@@ -7,8 +7,8 @@ export const mainMenu = [
     title: 'About Us',
     path: '/about',
   },
-  {
-    title: 'Login',
-    path: 'https://www.skool.com/retailtainment/about',
-  },
+  // {
+  //   title: 'Login',
+  //   path: 'https://www.skool.com/retailtainment/about',
+  // },
 ];
