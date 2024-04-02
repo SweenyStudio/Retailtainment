@@ -17,10 +17,10 @@ export default function Apply() {
   }, [pathname]);
 
   return (
-    <>
+    <div className="bg-black">
       <Navbar />
       <div data-tf-live="01HRB4Z5G78XA5XYWYVNYN4RCB"></div>
       <Script src="//embed.typeform.com/next/embed.js"></Script>
-    </>
+    </div>
   );
 }
