@@ -22,12 +22,12 @@ const Socials = [
   },
   {
     name: 'TikTok',
-    link: 'https://www.youtube.com/@simonbeard_',
+    link: 'https://www.tiktok.com/@simonbeard_official',
     logo: TiktokLogo,
   },
   {
     name: 'YouTube',
-    link: 'https://www.youtube.com/simonbeard',
+    link: 'https://www.youtube.com/@simonbeard_',
     logo: YoutubeLogo,
   },
   {
@@ -44,7 +44,7 @@ export default function Footer() {
         <div className="flex flex-col justify-center items-center gap-y-6">
           <Image src={Logo} alt="Logo" className="h-12 w-auto" />
           <SubHeaderLight className="text-center">
-            SCALING THE NEXT GENERATION OF BRANDS
+            ​​ECOMMERCE & RETAIL ACCELERATOR
           </SubHeaderLight>
           <div className="flex flex-row gap-x-4 mt-12">
             {Socials.map((social, index) => (
