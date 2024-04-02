@@ -1,6 +1,7 @@
 'use client';
 
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 import { cn } from '@/utils/cn';
@@ -15,6 +16,7 @@ export const InfiniteMovingCards = ({
   items: {
     image: string | StaticImageData;
     name: string;
+    href: string;
   }[];
   direction?: 'left' | 'right';
   speed?: 'fast' | 'normal' | 'slow';
@@ -88,12 +90,13 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item) => (
-          <Image
-            className="h-24 w-72 relative bg-gradient-to-b from-black to-zinc-900 rounded-2xl border border-b-0 flex-shrink-0 border-zinc-700 px-8 py-6 md:w-[450px]"
-            src={item.image}
-            alt={item.name}
-            key={item.name}
-          />
+          <Link href={item.href} key={item.name}>
+            <Image
+              className="h-24 w-72 relative bg-gradient-to-b from-black to-zinc-900 rounded-2xl border border-b-0 flex-shrink-0 border-zinc-700 px-8 py-6 md:w-[450px]"
+              src={item.image}
+              alt={item.name}
+            />
+          </Link>
         ))}
       </ul>
     </div>

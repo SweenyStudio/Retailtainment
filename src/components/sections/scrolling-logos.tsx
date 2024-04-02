@@ -21,17 +21,21 @@ const Logos = [
   {
     name: 'The Australian',
     image: LogoAustralian,
+    href: '/about',
   },
   {
     name: 'Financial Review',
     image: LogoFinancial,
+    href: '/about',
   },
   {
     name: 'Forbes',
     image: LogoForbes,
+    href: '/about',
   },
   {
     name: 'Shopify',
     image: LogoShopify,
+    href: '/about',
   },
 ];
