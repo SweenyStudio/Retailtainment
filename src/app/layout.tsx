@@ -1,10 +1,10 @@
-import '../styles/globals.css';
-
 import Footer from '@/components/sections/footer';
 import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
+import { redirect } from 'next/navigation'; // Import the redirect function
+import '../styles/globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -49,6 +49,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Perform a server-side redirect here
+  redirect('https://onelifeclub.com/'); // Redirect to your desired URL
+
   return (
     <html lang="en">
       <GoogleTagManager gtmId="GTM-KFPKWBMH" />
